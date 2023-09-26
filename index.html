@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="file/main.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<canvas class="background"></canvas>
+	<div class="all_lab navbar__wrapper _anim-items">
+		<p class="lab__item navbar__item">
+			<a href="lab1/lab1.html">Лабораторна робота 1</a>
+		</p>
+		<p class="lab__item navbar__item">
+			<a href="lab2/lab2.html">Лабораторна робота 2</a>
+		</p>
+		<p class="lab__item navbar__item">
+			<a href="lab3/lab3.html">Лабораторна робота 3</a>
+		</p>
+		<p class="lab__item navbar__item">
+			<a href="lab4/lab4.html">Лабораторна робота 4</a>
+		</p>
+		<p class="lab__item navbar__item">
+			<a href="lab5/lab5.html">Лабораторна робота 5</a>
+		</p>
+		<p class="lab__item navbar__item">
+			<a href="lab6/lab6.html">Лабораторна робота 6</a>
+		</p>
+		<p class="lab__item navbar__item">
+			<a href="lab7/lab7.html">Лабораторна робота 7</a>
+		</p>
+		<p class="lab__item navbar__item">
+			<a href="lab8/lab8.html">Лабораторна робота 8</a>
+		</p>
+		<p class="lab__item navbar__item">
+			<a href="lab9/lab9.html">Лабораторна робота 9</a>
+		</p>
+		<p class="lab__item navbar__item">
+			<a href="lab10/lab10.html">Лабораторна робота 10</a>
+		</p>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+	<script>
+		let options = {
+			root: null,
+			rootMargin: '5px',
+			threshold: 0.3,
+		};
+		let targets = document.querySelectorAll('._anim-items');
+		let callback = function (entries, observer) {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('_active');
+				} else {
+					if (!entry.target.classList.contains('_anim-no-hide')) {
+						entry.target.classList.remove('_active');
+					}
+				}
+			});
+		}
+		let observer = new IntersectionObserver(callback, options);
+		targets.forEach(target => {
+			observer.observe(target);
+		});
+
+
+		window.onload = function () {
+			Particles.init({
+				selector: ".background"
+			});
+		};
+
+		const particles = Particles.init({
+			selector: ".background",
+			// color: ["#CCCCFF", "#FFCCCC", "#CCFFCC"],
+			color: ["#03dac6", "#ff0266", "#ffa500"],
+			breakpoint: 800,
+			maxParticles: 200,
+			connectParticles: true,
+			sizeVariations: 5,
+
+			responsive: [
+				{
+					breakpoint: 800,
+					options: {
+						connectParticles: false
+					}
+				}, {
+					breakpoint: 400,
+					options: {
+						maxParticles: 50,
+						connectParticles: true
+					}
+				}, {
+					breakpoint: 200,
+					options: {
+						color: "#FFFFFF",
+						maxParticles: 25,
+						connectParticles: true
+					}
+				}, {
+					breakpoint: 100,
+					options: {
+						sizeVariations: 25,
+						color: ["#FFCCFF", "#FFFFCC", "#CCFFFF"],
+						maxParticles: 10,
+						connectParticles: true
+					}
+				}
+			]
+		});
+	</script>
+</body>
+
+</html>

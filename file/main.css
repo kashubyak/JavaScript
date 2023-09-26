@@ -1,0 +1,133 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "ROBOTO", sans-serif;
+}
+
+.background {
+	position: absolute;
+	background: #333;
+	background-size: cover;
+	height: 100vh;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 0;
+}
+
+.all_lab {
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+	flex-direction: column;
+}
+.all_lab p {
+	padding: 10px 0;
+}
+.all_lab a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.all_lab {
+	text-align: center;
+}
+
+.header__nav {
+	font-family: 'Source Sans Pro', sans-serif;
+	position: sticky;
+	width: 100%;
+	height: 125px;
+	left: 0px;
+	top: 0px;
+	background: #032429;
+	box-shadow: 0px 3px 40px #000000;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.navbar__wrapper {
+	display: flex;
+	justify-content: space-between;
+	font-size: 25px;
+}
+
+.navbar__item {
+	position: relative;
+	display: flex;
+	transition: all .2s;
+}
+
+.navbar__item::after {
+	position: absolute;
+	content: "";
+	width: 0%;
+	height: 3px;
+	background-color: #fff;
+	bottom: 0px;
+	left: 0;
+	z-index: 5;
+	transition: width .4s;
+}
+
+.navbar__item:hover::after {
+	color: black;
+	width: 100%;
+}
+
+.all_lab .lab__item {
+	transform: translate(-100%, 0px);
+	transition: all 0.8s ease 0s;
+	opacity: 0;
+}
+
+.all_lab._active .lab__item {
+	transform: translate(0px, 0px);
+	opacity: 1;
+}
+
+.all_lab._active .lab__item:nth-child(2) {
+	transition: all 0.8s ease 0.2s;
+}
+
+.all_lab._active .lab__item:nth-child(3) {
+	transition: all 0.8s ease 0.4s;
+}
+
+.all_lab._active .lab__item:nth-child(4) {
+	transition: all 0.8s ease 0.6s;
+}
+
+.all_lab._active .lab__item:nth-child(5) {
+	transition: all 0.8s ease 0.8s;
+}
+
+.all_lab._active .lab__item:nth-child(6) {
+	transition: all 0.8s ease 1s;
+}
+
+.all_lab._active .lab__item:nth-child(7) {
+	transition: all 0.8s ease 1.2s;
+}
+
+.all_lab._active .lab__item:nth-child(8) {
+	transition: all 0.8s ease 1.4s;
+}
+
+.all_lab._active .lab__item:nth-child(9) {
+	transition: all 0.8s ease 1.6s;
+}
+
+.all_lab._active .lab__item:nth-child(10) {
+	transition: all 0.8s ease 1.8s;
+}
+
+.all_lab._active .lab__item:nth-child(11) {
+	transition: all 0.8s ease 2s;
+}
