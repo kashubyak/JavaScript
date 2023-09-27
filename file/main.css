@@ -20,15 +20,19 @@ body {
 	z-index: 0;
 }
 
+
 .all_lab {
 	display: flex;
 	align-items: center;
 	min-height: 100vh;
 	flex-direction: column;
+	padding: 0px 0px 0px 10px;
 }
+
 .all_lab p {
 	padding: 10px 0;
 }
+
 .all_lab a {
 	text-decoration: none;
 	color: #fff;
@@ -79,6 +83,23 @@ body {
 .navbar__item:hover::after {
 	color: black;
 	width: 100%;
+}
+
+.name .my-name {
+	z-index: 10;
+	color: #fcfcfc;
+	font-size: 30px;
+}
+
+.name .my-name {
+	transform: translate(0px, -100%);
+	transition: all 0.8s ease 2.2s;
+	opacity: 0;
+}
+
+.name._active .my-name {
+	transform: translate(0px, 20px);
+	opacity: 1;
 }
 
 .all_lab .lab__item {
