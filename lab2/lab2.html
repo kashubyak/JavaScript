@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Годинник</title>
+</head>
+<link rel="stylesheet" href="css/lab2.css">
+
+<body>
+	<div class="wrapper">
+		<div class="task item1">
+			<h3>Task1</h3>
+			<div id="clock"></div>
+		</div>
+	</div>
+
+	<script>
+		function updateClock() {
+			const now = new Date();
+			const hours = now.getHours().toString().padStart(2, '0');
+			const minutes = now.getMinutes().toString().padStart(2, '0');
+			const seconds = now.getSeconds().toString().padStart(2, '0');
+			const year = now.getFullYear();
+			const month = (now.getMonth() + 1).toString().padStart(2, '0');
+			const day = now.getDate().toString().padStart(2, '0');
+
+			const clockDisplay = `${hours}:${minutes}:${seconds}-${year}-${month}-${day}`;
+			document.getElementById('clock').textContent = clockDisplay;
+		}
+		setInterval(updateClock, 1000);
+		updateClock();
+	</script>
+</body>
+
+</html>

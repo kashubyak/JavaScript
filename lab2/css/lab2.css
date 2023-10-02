@@ -1,0 +1,35 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #333;
+	padding: 20px;
+	color: #e4e2e2;
+}
+
+h3 {
+	font-size: 2.5em;
+	color: #bfbcbc;
+	margin: 0px 0px 10px 0px;
+}
+
+.clock {
+	font-size: 25px;
+}
+
+.wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.task {
+	display: inline-block;
+	border: 1px solid #000;
+	padding: 30px;
+	border-radius: 5%;
+	margin-right: 40px;
+	text-align: center;
+}
