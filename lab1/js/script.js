@@ -23,7 +23,6 @@ function task2() {
 	}
 	equation.addEventListener('click', calculationEq)
 }
-
 function task3() {
 	const focusInput = document.getElementById('focusInput');
 	const cursorInput = document.getElementById('cursorInput');
@@ -48,8 +47,6 @@ function task3() {
 	placeholderFocus();
 	placeholderCursor();
 };
-
-
 function task4() {
 	const item4__result = document.getElementById('item4__result');
 	const task4_result_but = document.getElementById('task4_result_but');
@@ -71,11 +68,9 @@ function task4() {
 function task5() {
 	const item5__result = document.getElementById('item5__result');
 	const task5_result_but = document.getElementById('task5_result_but');
-
 	task5_result_but.addEventListener('click', function calculateSum() {
 		const x = parseFloat(document.getElementById('task5x').value);
 		const y = parseFloat(document.getElementById('task5y').value);
-
 		function factorial(n) {
 			let fact = 1;
 			for (let i = 2; i <= n; i++) {
@@ -83,18 +78,13 @@ function task5() {
 			}
 			return fact;
 		}
-
 		let sum = 0;
 		for (let i = 2; i <= 6; i++) {
 			sum += Math.pow(-1, i) * (1 + 2 * x * y - Math.pow(x, 2)) / factorial(i + 1);
 		}
-		
 		item5__result.innerHTML = `Результат обчислення: ${sum}`;
 	});
 }
-
-
-
 function task6() {
 	const continents = ['Африка', 'Азія', 'Європа', 'Північна Америка', 'Південна Америка', 'Австралія', 'Антарктида'];
 	const populationDensity = [36, 149, 73, 22, 24, 3, 0.0003];
