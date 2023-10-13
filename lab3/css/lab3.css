@@ -1,0 +1,81 @@
+#item1Error {
+	padding: 3px 0px;
+}
+
+.item2 a {
+	text-decoration: none;
+	color: #bfbcbc;
+	font-size: 25px;
+}
+
+#imageDisplay {
+	max-width: 100%;
+	max-height: 100%;
+	width: 400px;
+	height: 400px;
+}
+
+#item2Prev,
+#item2Next {
+	background-color: #817e7e;
+	border: 0;
+}
+
+.task {
+	padding: 10px;
+}
+
+.item5 {
+	white-space: nowrap;
+	margin: 20px 50px 50px 50px;
+}
+
+.itemExam {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+}
+
+.example p {
+	font-size: 23px;
+	font-weight: bold;
+
+}
+
+.example input {
+	width: 30%;
+	margin-right: 10px;
+	height: 20px;
+}
+
+.textResult.correct::after,
+.textResult.uncorrect::after {
+	content: '';
+	display: inline-block;
+	mix-blend-mode: color;
+	width: 20px;
+	height: 20px;
+	position: relative;
+	top: 4px;
+	padding-left: 10px;
+}
+
+.example .textResult.correct::after {
+	content: '';
+	background: url(../img/checkMark.png)100% / 100% no-repeat;
+}
+
+.example .textResult.uncorrect::after {
+	content: '';
+	background: url(../img/cross.png)100% / 100% no-repeat;
+}
+
+#item5Reload img {
+	max-width: 40%;
+	max-height: 100%;
+}
+
+.textResult {
+	font-size: 18px;
+}

@@ -1,51 +1,10 @@
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
-
-body {
-	background-color: #333;
-	padding: 20px;
-	color: #e4e2e2;
-	height: 100vh;
-	margin: 0;
-	font-family: Arial, sans-serif;
-}
-
-h3 {
-	font-size: 2.5em;
-	color: #bfbcbc;
-	margin: 0px 0px 10px 0px;
-}
-
-.clock {
-	font-size: 25px;
-}
-
-.wrapper {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-}
-
-.task {
-	display: inline-block;
-	border: 1px solid #000;
-	padding: 30px;
-	border-radius: 5%;
-	margin-right: 40px;
-	text-align: center;
-}
-
 .tas3_input {
 	background-color: #999;
 	padding: 3px 10px;
 	margin: 3px 0px;
 	font-size: 15px;
 	font-weight: 600;
-	color: #fff;
+	color: #3d3c3c;
 }
 
 .calculator {
@@ -62,6 +21,7 @@ h3 {
 	padding: 10px;
 	margin-bottom: 10px;
 	font-size: 24px;
+	color: #3d3c3c;
 }
 
 .calculator .buttons {
@@ -75,10 +35,12 @@ h3 {
 	height: 50px;
 	font-size: 20px;
 	cursor: pointer;
+	transition: 0.5s;
 }
 
 .calculator .buttons input[type="button"]:hover {
-	background-color: #f0f0f0;
+	transition: 0.2s;
+	background-color: #ece4e4;
 }
 
 .calculator .buttons input[type="button"].equal {
