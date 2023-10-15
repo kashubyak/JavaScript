@@ -26,8 +26,10 @@
 }
 
 .item5 {
+	padding: 0px;
 	white-space: nowrap;
-	margin: 20px 50px 50px 50px;
+	max-width: 50%;
+	margin: 0px auto;
 }
 
 .itemExam {

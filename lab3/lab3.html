@@ -8,6 +8,13 @@
 <link rel="stylesheet" href="css/lab3.css">
 
 <body>
+	<div class="task item5">
+		<h1>Тест на множення</h1>
+		<div class="example"></div>
+		<button id="item5Submit">Завершити</button>
+		<button id="item5Reload"><img src="img/reload.png" alt=""></button>
+		<p id="resultCurrentQuestion"></p>
+	</div>
 	<div class="wrapper">
 		<div class="task item1">
 			<h3>Task1</h3>
@@ -29,13 +36,6 @@
 				< </button>
 					<img id="imageDisplay" alt="Зображення">
 					<button id="item2Next">></button>
-		</div>
-		<div class="task item5">
-			<h1>Тест на множення</h1>
-			<div class="example"></div>
-			<button id="item5Submit">Завершити</button>
-			<button id="item5Reload"><img src="img/reload.png" alt=""></button>
-			<p id="resultCurrentQuestion"></p>
 		</div>
 	</div>
 	<script>
@@ -121,6 +121,7 @@
 					examplePar.classList.add('itemExam')
 					examplePar.innerText = `${num1} * ${num2} = `;
 					const resultInput = document.createElement('input');
+					resultInput.type = 'number';
 					resultInput.type = 'text';
 					examplePar.appendChild(resultInput);
 					exampleArr.push({ examplePar, num1, num2, resultInput });
