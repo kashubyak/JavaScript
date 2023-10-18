@@ -1,0 +1,51 @@
+body {
+	background-color: #333;
+	color: #e4e2e2;
+	font-family: Arial, sans-serif;
+	color: #bfbcbc;
+}
+
+.block1,
+.block2 {
+	display: flex;
+	justify-content: space-around;
+	margin: 50px 0px;
+}
+
+
+.question {
+	margin-bottom: 20px;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+ul li {
+	margin-bottom: 10px;
+}
+
+.hidden {
+	display: none;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+}
+
+table,
+th,
+td {
+	border: 1px solid black;
+	padding: 10px;
+}
+
+th {
+	text-align: left;
+}
+button{
+	text-align: center;
+}
