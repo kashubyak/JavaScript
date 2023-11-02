@@ -1,0 +1,49 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+form {
+	width: 300px;
+	margin: 20px 40px;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+}
+
+form div {
+	margin-bottom: 15px;
+}
+
+label {
+	display: block;
+	font-weight: bold;
+}
+
+input:not([type="submit"]) {
+	width: 100%;
+	padding: 8px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.icon {
+	float: right;
+	margin-right: 10px;
+	width: 16px;
+}
+
+.error {
+	color: red;
+	font-size: 12px;
+}
+
+input[type="submit"] {
+	width: 100%;
+	padding: 5px;
+	font-size: 16px;
+	border-radius: 10px;
+	margin: 5px 0;
+	border: 0;
+}
