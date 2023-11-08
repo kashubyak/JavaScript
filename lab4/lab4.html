@@ -4,92 +4,25 @@
 <head>
 	<title>Тестування</title>
 </head>
-<style>
-	body {
-		font-family: Arial, sans-serif;
-		padding: 20px;
-	}
-
-	h1 {
-		text-align: center;
-	}
-
-	form {
-		max-width: 600px;
-		margin: 0 auto;
-	}
-
-	h3 {
-		margin-top: 20px;
-	}
-
-	input[type="radio"],
-	input[type="checkbox"] {
-		margin-bottom: 10px;
-	}
-
-	select {
-		width: 100%;
-		margin-bottom: 10px;
-	}
-
-	input[type="text"] {
-		width: 100%;
-	}
-
-	button {
-		display: block;
-		margin: 20px 0;
-		padding: 10px 20px;
-		font-size: 16px;
-		font-weight: bold;
-	}
-
-	table {
-		width: 100%;
-		border-collapse: collapse;
-		margin-top: 20px;
-	}
-
-	table,
-	th,
-	td {
-		border: 1px solid #ccc;
-		padding: 10px;
-	}
-
-	th {
-		text-align: left;
-		background-color: #f0f0f0;
-	}
-
-	#totalScore {
-		font-weight: bold;
-		font-size: 18px;
-	}
-
-</style>
+<link rel="stylesheet" href="css/style.css">
 
 <body>
 
 	<h1>Тестування</h1>
 
 	<form id="testForm" onsubmit="calculateResults(); return false;">
-		<!-- Запитання 1 -->
 		<h3>Питання 1: Що таке HTML?</h3>
 		<input type="radio" name="question1" value="0"> Hyperlink and Text Markup Language<br>
 		<input type="radio" name="question1" value="0"> Home Tool Markup Language<br>
 		<input type="radio" name="question1" value="1"> HyperText Markup Language<br>
 		<input type="radio" name="question1" value="0"> Hyperlink Text Markup Language<br>
 
-		<!-- Запитання 2 -->
 		<h3>Питання 2: Яка функція використовується для виводу тексту в консоль JavaScript?</h3>
 		<input type="radio" name="question2" value="1"> console.log()<br>
 		<input type="radio" name="question2" value="0"> print()<br>
 		<input type="radio" name="question2" value="0"> log()<br>
 		<input type="radio" name="question2" value="0"> write()<br>
 
-		<!-- Запитання 3 -->
 		<h3>Питання 3: Які типи даних є в JavaScript?</h3>
 		<input type="checkbox" name="question3" value="1"> String<br>
 		<input type="checkbox" name="question3" value="1"> Number<br>
@@ -105,35 +38,30 @@
 			<option value="0">div</option>
 		</select>
 
-		<!-- Запитання 5 -->
 		<h3>Питання 5: Яка функція використовується для визначення довжини рядка в JavaScript?</h3>
 		<input type="radio" name="question5" value="0"> count()<br>
 		<input type="radio" name="question5" value="0"> length()<br>
 		<input type="radio" name="question5" value="1"> str.length<br>
 		<input type="radio" name="question5" value="0"> stringLength()<br>
 
-		<!-- Запитання 6 -->
 		<h3>Питання 6: Які типи даних є в Python?</h3>
 		<input type="checkbox" name="question6" value="1"> Integer<br>
 		<input type="checkbox" name="question6" value="1"> String<br>
 		<input type="checkbox" name="question6" value="0"> Boolean<br>
 		<input type="checkbox" name="question6" value="0"> Float<br>
 
-		<!-- Запитання 7 -->
 		<h3>Питання 7: Що означає CSS?</h3>
 		<input type="radio" name="question7" value="0"> Creative Style Sheets<br>
 		<input type="radio" name="question7" value="1"> Cascading Style Sheets<br>
 		<input type="radio" name="question7" value="0"> Computer Style Sheets<br>
 		<input type="radio" name="question7" value="0"> Colorful Style Sheets<br>
 
-		<!-- Однорядкове текстове поле -->
 		<h3>Додатковий коментар:</h3>
 		<input type="text" name="additionalComment"><br><br>
 
 		<button type="submit">Отримати результати</button>
 	</form>
 
-	<!-- Виведення результатів тесту -->
 	<h2>Результати тестування:</h2>
 	<table border="1">
 		<tr>
@@ -178,58 +106,9 @@
 		</tr>
 	</table>
 
-	<!-- Загальний бал -->
 	<h2>Загальний бал: <span id="totalScore">0</span></h2>
 
-	<script>
-		function calculateResults() {
-			let totalScore = 0;
-
-			// Обчислення балів для кожного запитання
-			const questionScores = [
-				calculateQuestionScore('question1', 1),
-				calculateQuestionScore('question2', 1),
-				calculateQuestionScore('question3', 2),
-				calculateQuestionScore('question4', 2),
-				calculateQuestionScore('question5', 1),
-				calculateQuestionScore('question6', 2),
-				calculateQuestionScore('question7', 1)
-			];
-
-			// Виведення балів для кожного запитання
-			for (let i = 0; i < questionScores.length; i++) {
-				const questionNumber = i + 1;
-				const resultQuestionId = `resultQuestion${questionNumber}`;
-				const resultScoreId = `resultScore${questionNumber}`;
-				const score = questionScores[i];
-
-				document.getElementById(resultQuestionId).innerText = `Бали: ${score}`;
-				document.getElementById(resultScoreId).innerText = score;
-				totalScore += score;
-			}
-
-			// Виведення загального балу
-			document.getElementById('totalScore').innerText = totalScore;
-		}
-
-		function calculateQuestionScore(questionName, correctCount) {
-			const answers = document.getElementsByName(questionName);
-			let selectedCount = 0;
-			for (let i = 0; i < answers.length; i++) {
-				if (answers[i].checked) {
-					selectedCount++;
-				}
-			}
-
-			if (selectedCount === correctCount) {
-				return correctCount;
-			} else if (selectedCount > 0 && selectedCount < correctCount) {
-				return 1;
-			} else {
-				return 0;
-			}
-		}
-	</script>
+	<script src="js/script.js"></script>
 
 </body>
 

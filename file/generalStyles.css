@@ -37,10 +37,12 @@ h3 {
 
 .task input {
 	background-color: #999;
-	padding: 3px 10px;
+	padding: 5px 10px;
 	margin: 3px 0px;
-	font-size: 15px;
+	font-size: 20px;
 	font-weight: 600;
+	border-radius: 10px;
+	border: 0;
 }
 
 .task input::placeholder {
