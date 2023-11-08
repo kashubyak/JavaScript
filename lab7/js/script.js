@@ -190,11 +190,31 @@ function task3() {
 
 		output32.innerHTML = 'Вихідні значення: ' + snakeCaseStrings.join(', ');
 	}
+	function CorrectionDates() {
+		const input33 = document.getElementById('input33');
+		const output33 = document.querySelector('.output33');
+		const inputValue1 = input33.value.split('/');
+
+		const сorrectionDates = inputValue1.map(сorrectionDates => {
+			const words = сorrectionDates.split('.');
+			const сorrectionDatesWords = words.map((word, index) => {
+				if (index === 0) {
+					return word.toLowerCase();
+				} else {
+					return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+				}
+			});
+			return сorrectionDatesWords.join('');
+		});
+
+		output33.innerHTML = 'Вихідні значення: ' + сorrectionDates.join('.');
+	};
+
 
 
 	submit31.addEventListener('click', toCamelCase)
 	submit32.addEventListener('click', toSnakeCase);
-	submit33.addEventListener('click', uppercaseLirstLetter);
+	submit33.addEventListener('click', CorrectionDates);
 }
 task1();
 task2();
