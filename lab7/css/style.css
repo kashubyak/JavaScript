@@ -1,7 +1,9 @@
-button{
+button {
 	margin-left: 5px;
-} 
-.item1 > div,
-.item2 > div {
+}
+
+.item1>div,
+.item2>div,
+.item3>div {
 	padding: 3px 0px;
 }
