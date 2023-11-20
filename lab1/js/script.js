@@ -95,7 +95,6 @@ function task6() {
 	function displayDensityAndArea() {
 		const continentInput = document.getElementById('continentInput').value;
 		const index = continents.indexOf(continentInput);
-
 		if (index !== -1) {
 			output.innerHTML = `
 <p>Інформація про ${continentInput}:</p>

@@ -94,6 +94,7 @@ function task3() {
 				}
 			}
 		}
+		
 
 		console.log('Сума елементів для варіанту 1:', sumVariant1);
 		console.log('Сума елементів для варіанту 2 (другий рядок):', sumVariant2);
