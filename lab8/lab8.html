@@ -13,15 +13,56 @@
 	<div class="wrapper">
 		<div class="task item1">
 			<h3>Task1</h3>
-			<div class="item1-time"></div>
-			<div class="item1_hours"><input placeholder="Години" type="text"><button id="submit11">Submit</button></div>
-			<div class="item1_minutes"><input placeholder="Хвилини" type="text"><button id="submit12">Submit</button></div>
-			<div class="item1_seconds"><input placeholder="Секунди" type="text"><button id="submit13">Submit</button></div>
+			<div id="currentSystemTime"></div>
+			<label for="hoursInput">Години:</label>
+			<input type="number" id="hoursInput" name="hoursInput"><br><br>
+			<label for="minutesInput">Хвилини:</label>
+			<input type="number" id="minutesInput" name="minutesInput"><br><br>
+			<label for="secondsInput">Секунди:</label>
+			<input type="number" id="secondsInput" name="secondsInput"><br><br>
+			<button id="submit1">Змінити час</button>
+			<div id="currentTime"></div>
 		</div>
-	</div>
+		<div class="task item2">
+			<div class="2.1">
+				<h3 class="h3_task2">Завдання 2.1.Виведення поточної дати, дня тижня і часу</h3>
+				<div class="areaDate"></div>
+				<button id="submit2">Perform</button>
+			</div>
+			<div class="2.2">
+				<h3 class="h3_task22"></h3>
+				<div class="areaDate2"></div>
+			</div>
+			<div class="2.3">
+				<h3 class="h3_task23">Завдання 2.3.Додавання дати</h3>
+				<input type="number" id="inputAddition">
+				<button id="submit23">Виконати 2.3</button>
+				<div id="addedTime"></div>
+			</div>
+			<div class="2.4">
+				<h3 class="h3_task24">Завдання 2.4</h3>
+				<input type="number" id="year" placeholder="Year:"><br>
+				<input type="number" id="month" placeholder="Month:"><br>
+				<button id="submit24">Виконати 2.4</button>
+				<div id="lastDay"></div>
+			</div>
+			<div class="2.5">
+				<h3 class="h3_task25">Завдання 2.5</h3>
+				<button id="submit25">Виконати 2.5</button>
+				<div id="secondsAtFirst"></div>
+				<div id="secondsToGo"></div>
+			</div>
+			<div class="2.6">
+				<h3 class="h3_task26">Завдання 2.6</h3>
+				<label for="userInput">Введіть дату та час у форматі 'дд.мм.рррр год:хв': </label><br>
+				<input type="text" id="userInput" /><br>
+				<button id="submit26">Виконати 2.6</button>
+				<div id="outputDate"></div>
+			</div>
+		</div>
 
 
-	<script src="js/script.js"></script>
+		<script src="js/script.js"></script>
 </body>
 
 </html>
