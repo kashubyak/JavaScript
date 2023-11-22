@@ -1,0 +1,49 @@
+.wrapper {
+	flex-direction: column;
+}
+
+progress {
+	width: 15%;
+	height: 40px;
+}
+
+.box {
+	width: 10%;
+	height: 100%;
+	background-color: #727171;
+	position: relative;
+	cursor: pointer;
+	border-radius: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #bfbcbc;
+}
+
+.box a {
+	color: #bfbcbc;
+	text-decoration: none;
+}
+
+.pathway {
+	width: 100%;
+	height: 50px;
+	margin: 10px 0px;
+	border-radius: 100px;
+
+}
+
+textarea {
+	resize: none;
+	width: 30%;
+	font-size: 16px;
+	padding: 5px;
+	background: #333;
+	border: 0;
+	color: #bfbcbc;
+}
+
+button {
+	padding: 10px;
+	font-size: 16px;
+}
