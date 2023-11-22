@@ -19,7 +19,7 @@ function performAnimation(animationOptions) {
 document.getElementById('prog').addEventListener('click', function () {
 	const elem = document.getElementById('prog');
 	performAnimation({
-		duration: 1000,
+		duration: 4000,
 		timing: function (timeFraction) {
 			return timeFraction;
 		},
@@ -78,7 +78,7 @@ function animateText(textArea) {
 	let to = text.length, from = 0;
 
 	performAnimation({
-		duration: 5000,
+		duration: 11000,
 		timing: bounce,
 		draw: function (progress) {
 			let result = (to - from) * progress + from;
