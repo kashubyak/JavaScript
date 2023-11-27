@@ -1,0 +1,100 @@
+#foo {
+	background: black;
+	padding: 5px;
+}
+
+.box {
+	padding: 20px;
+	border: 2px solid #000;
+	margin: 10px;
+}
+
+.item3 div {
+	color: blue;
+}
+
+.item3 div#five {
+	color: red;
+}
+
+.nextAll div {
+	width: 80px;
+	height: 80px;
+	background: #abc;
+	border: 2px solid black;
+	margin: 10px;
+	float: left;
+}
+
+.nextAll div.after {
+	border-color: red;
+}
+
+.siblings {
+	padding-top: 150px;
+}
+
+.parent {
+	position: relative;
+	border: 2px solid #000;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.child {
+	position: relative;
+	top: 20px;
+	left: 20px;
+	background-color: lightblue;
+	padding: 10px;
+}
+
+.modify li {
+	list-style: none;
+}
+
+#trimstr {
+	display: inline;
+	color: #fff;
+	background-color: #666;
+	font-size: 16px;
+	padding: 3px;
+	margin-bottom: 20px;
+}
+
+#animatedBox {
+	width: 100px;
+	height: 100px;
+	background-color: #3498db;
+	margin-bottom: 20px;
+	text-align: center;
+	margin: 0px auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#logi {
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin-top: 20px;
+}
+
+.item7 {
+	padding: 0px 100px;
+}
+
+.item7 p {
+	background: rgb(225, 214, 225);
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.item7 div {
+	background: #def3ca;
+	margin: 3px;
+	width: 80px;
+	display: none;
+	float: left;
+	text-align: center;
+}
