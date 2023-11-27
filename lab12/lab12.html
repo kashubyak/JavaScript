@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" href="../file/generalStyles.css">
+	<style>
+		.common-div {
+			width: 100px;
+			height: 100px;
+			display: inline-block;
+			margin: 0px 10px;
+		}
+
+		.block-red {
+			background-color: red;
+		}
+
+		.block-blue {
+			background-color: blue;
+		}
+
+		.block-green {
+			background-color: green;
+		}
+
+		#main-div {
+			width: 100px;
+			height: 100px;
+			background-color: #bfbcbc;
+			position: relative;
+			left: 500px;
+			display: inline-block;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="main-div"></div>
+
+	<div class="common-div block-red"></div>
+	<div class="common-div block-blue"></div>
+	<div class="common-div block-green"></div>
+
+	<script>
+		$(document).ready(function () {
+			var $mainDiv = $('#main-div');
+
+			function runMainAnimation() {
+				$mainDiv.animate({
+					left: '0px',
+				}, {
+					duration: 2000,
+					easing: 'linear',
+					complete: function () {
+						console.log('Головна анімація завершена! Запуск нової анімації...');
+						$mainDiv.animate({
+							left: '500px',
+						}, {
+							duration: 2000,
+							easing: 'linear',
+							complete: runMainAnimation
+						});
+					}
+				});
+			}
+
+			runMainAnimation();
+		});
+
+		$(document).ready(function () {
+			var $redBlock = $('.block-red');
+			var $blueBlock = $('.block-blue');
+			var $greenBlock = $('.block-green');
+
+			function animateRedBlock() {
+				$redBlock.fadeOut(1000).fadeIn(1000, animateRedBlock);
+			}
+
+			function animateBlueBlock() {
+				$blueBlock.slideUp(1000).slideDown(1000, animateBlueBlock);
+			}
+
+			function animateGreenBlock() {
+				$greenBlock.hide(1000).show(1000, animateGreenBlock);
+			}
+
+			animateRedBlock();
+			animateBlueBlock();
+			animateGreenBlock();
+		});
+	</script>
+
+</body>
+
+</html>
