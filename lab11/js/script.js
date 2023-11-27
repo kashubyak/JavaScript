@@ -127,16 +127,49 @@ $(document).ready(function () {
 			);
 		});
 	});
-	$("button").on("click", function () {
-		$(".item7 p").toggle("slow");
-	});
-	$("#showr").on("click", function () {
-		$("div").first().show("fast", function showNext() {
-			$(this).next("div").show("fast", showNext);
+	$(document).ready(function () {
+		$(".toggleButton").on("click", function () {
+			$(this).siblings("p").toggle("slow");
+		});
+
+		$(".showButton").on("click", function () {
+			$(this).siblings("div").first().show("fast", function showNext() {
+				$(this).next("div").show("fast", showNext);
+			});
+		});
+
+		$(".hideButton").on("click", function () {
+			$(this).siblings("div").hide(1000);
 		});
 	});
 
-	$("#hidr").on("click", function () {
-		$("div").hide(1000);
+	$("#start").on("click", function () {
+		let myDiv = $(".myDiv");
+		myDiv.show("slow");
+		myDiv.animate({
+			left: "+=200"
+		}, 5000);
+
+		myDiv.queue(function () {
+			let that = $(this);
+			that.addClass("newcolor");
+			that.dequeue();
+		});
+
+		myDiv.animate({
+			left: "-=200"
+		}, 1500);
+		myDiv.queue(function () {
+			let that = $(this);
+			that.removeClass("newcolor");
+			that.dequeue();
+		});
+		myDiv.slideUp();
+	});
+
+	$("#stop").on("click", function () {
+		let myDiv = $(".myDiv");
+		myDiv.clearQueue();
+		myDiv.stop();
 	});
 });
