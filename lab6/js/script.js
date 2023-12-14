@@ -1,4 +1,4 @@
-function task1() {
+function task1() { 
 	const emailCheck = document.getElementById('emailCheck')
 	function checkEmail() {
 		const email = document.getElementById('emailInput').value;

@@ -193,21 +193,22 @@ function task3() {
 	function CorrectionDates() {
 		const input33 = document.getElementById('input33');
 		const output33 = document.querySelector('.output33');
-		const inputValue1 = input33.value.split('/');
+		const inputValue = input33.value;
 
-		const сorrectionDates = inputValue1.map(сorrectionDates => {
-			const words = сorrectionDates.split('.');
-			const сorrectionDatesWords = words.map((word, index) => {
-				if (index === 0) {
-					return word.toLowerCase();
-				} else {
-					return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-				}
-			});
-			return сorrectionDatesWords.join('');
-		});
+		const convertDateFormat = (input) => {
+			const dateRegex = /^\d{4}\/\d{2}\/\d{2}$/; // Перевірка формат yyyy/mm/dd
+			const dateRegexDMY = /^\d{2}\/\d{2}\/\d{4}$/; // Перевірка формат dd/mm/yyyy
 
-		output33.innerHTML = 'Вихідні значення: ' + сorrectionDates.join('.');
+			if (dateRegex.test(input)) {
+				const dateParts = input.split('/');
+				return dateParts.reverse().join('.');
+			} else if (dateRegexDMY.test(input)) {
+				return input.split('/').join('.');
+			} else {
+				return 'Формат дати не відповідає yyyy/mm/dd або dd/mm/yyyy';
+			}
+		};
+		output33.innerHTML = 'Вихідні значення: ' + convertDateFormat(inputValue);
 	};
 
 

@@ -110,6 +110,17 @@
 	flex: 0 1 50%;
 }
 
+.tabs__item img {
+	width: 50px;
+	height: 50px;
+}
+
+.tabs__item.active img {
+	width: 80px;
+	height: 80px;
+	transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
 .tabs__item span {
 	position: relative;
 	z-index: 2;

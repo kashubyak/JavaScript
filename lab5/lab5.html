@@ -277,8 +277,12 @@
 		</ul>
 		<div class="tabs">
 			<nav class="tabs__items">
-				<a href="#it1" class="tabs__item"><span>Перша вкладка</span></a>
-				<a href="#it2" class="tabs__item"><span>Друга вкладка</span></a>
+				<a href="#it1" class="tabs__item"><span><img
+							src="https://png.pngtree.com/png-vector/20190214/ourmid/pngtree-vector-gallery-icon-png-image_515223.jpg"
+							alt="">Перша вкладка</span></a>
+				<a href="#it2" class="tabs__item"><span><img
+							src="https://png.pngtree.com/png-vector/20190214/ourmid/pngtree-vector-gallery-icon-png-image_515223.jpg"
+							alt="">Друга вкладка</span></a>
 				<a href="#it3" class="tabs__item"><span>Третя вкладка</span></a>
 				<a href="#it4" class="tabs__item"><span>Четверта вкладка</span></a>
 			</nav>
@@ -306,6 +310,18 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const tabs = document.querySelectorAll('.tabs__item');
+
+			tabs.forEach(tab => {
+				tab.addEventListener('click', function () {
+					tabs.forEach(t => t.classList.remove('active'));
+					this.classList.add('active');
+				});
+			});
+		});
+	</script>
 </body>
 
 </html>
